@@ -3,7 +3,7 @@
 <%= will_paginate @places %>
 <div class="booyah-box col-xs-10 col-xs-offset-1">
 	<h1><%= link_to place.name, place_path(place) %></h1><br />
-	<i><%= place.address %></i><br /><br />
+	<i><%= link_to place.address, place_path(place) %></i><br /><br />
 	<p><%= place.description %></p><br />
 
 	<% if place.user.present? %>
