@@ -3,6 +3,17 @@
 <i><%= @place.address %></i>
 <br /><br />
 <p><%= @place.description %></p>
+<br />
+<br />
+
+end
+<div class=clear></div>
+<div class="clear"></div>
+<%= simple_form_for @photo, :url => '#' do |f| %>
+  <%= f.input :photo %>
+  <%= f.input :caption %>
+  <%= f.submit "Add a Comment", :class => 'btn btn-primary' %>
+<% end %>
 
 <% if @place.latitude.present? && @place.longitude.present? %>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
@@ -64,11 +75,14 @@ var myLatlng = new google.maps.LatLng(<%= @place.latitude %>,<%= @place.longitud
 </div>
 
 <h1 class="pull-left">Comments</h1>
+<br/>
+<br/>
+
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">
   Add a comment
 </button>
-<div class="clear"></div>
+<div class=clear></div>
 <%@place.comments.each do |comment| %>
 <div class="col-xs-12 col-sm-6">
   <blockquote>
