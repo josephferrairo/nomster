@@ -5,14 +5,23 @@
 <p><%= @place.description %></p>
 <br />
 <br />
+<%@place.photos.each do |photo| %>
+<div class="col-xs-12 col-sm-6">
+    <% if photo.present? %>
+    <b><%= image_tag photo %></b>
+    <% end %>
+    <%= photo.caption %>
+    <small><%= photo.user %></small>
+</div>
+<% end %>
 
-end
+
 <div class=clear></div>
 <div class="clear"></div>
-<%= simple_form_for @photo, :url => '#' do |f| %>
-  <%= f.input :photo %>
+<%= simple_form_for @photo, :url => place_photos_path(@place) do |f| %>
+  <%= f.input :picture %>
   <%= f.input :caption %>
-  <%= f.submit "Add a Comment", :class => 'btn btn-primary' %>
+  <%= f.submit "Add a Photo", :class => 'btn btn-primary' %>
 <% end %>
 
 <% if @place.latitude.present? && @place.longitude.present? %>
