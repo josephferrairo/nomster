@@ -39,10 +39,7 @@ var myLatlng = new google.maps.LatLng(<%= @place.latitude %>,<%= @place.longitud
 <div class="clear"></div>
 
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
-  Add a comment
-</button>
+
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -66,9 +63,14 @@ var myLatlng = new google.maps.LatLng(<%= @place.latitude %>,<%= @place.longitud
   </div>
 </div>
 
-<h1>Comments</h1>
+<h1 class="pull-left">Comments</h1>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">
+  Add a comment
+</button>
+<div class="clear"></div>
 <%@place.comments.each do |comment| %>
-<div>
+<div class="col-xs-12 col-sm-6">
   <blockquote>
     <% if comment.humanized_rating.present? %>
     <b><%= comment.humanized_rating %></b> -
