@@ -7,9 +7,10 @@
 <br />
 <%@place.photos.each do |photo| %>
 <div class="col-xs-12 col-sm-6">
-    <% if photo.present? %>
-    <b><%= image_tag photo %></b>
+    <% if photo.picture.present? %>
+    <b><%= image_tag photo.picture %></b>
     <% end %>
+    <br />
     <%= photo.caption %>
     <small><%= photo.user %></small>
 </div>
