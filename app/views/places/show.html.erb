@@ -7,18 +7,22 @@
 <br />
 <%@place.photos.each do |photo| %>
 <div class="col-xs-12 col-sm-6">
+
     <% if photo.picture.present? %>
-    <b><%= image_tag photo.picture %></b>
+    <b><%= image_tag photo.picture, :size => '390x270' %></b>
     <% end %>
     <br />
-    <%= photo.caption %>
+ <%= photo.caption %>
     <small><%= photo.user %></small>
 </div>
 <% end %>
 
-
+<br />
+<br />
 <div class=clear></div>
 <div class="clear"></div>
+<br />
+
 <%= simple_form_for @photo, :url => place_photos_path(@place) do |f| %>
   <%= f.input :picture %>
   <%= f.input :caption %>
