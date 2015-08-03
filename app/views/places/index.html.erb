@@ -34,7 +34,7 @@
     <div class="page_info">
       <%= page_entries_info @places %>
     </div>
-    <%= will_paginate @places, :container => false %>
+
   </div>
 <% @places.each do |place| %>
 
@@ -58,6 +58,7 @@
 	</div>
 	<% end %>
 </div>
-
 <hr />
 <% end %>
+<div class=clear></div>
+    <%= will_paginate @places, :container => false %>
