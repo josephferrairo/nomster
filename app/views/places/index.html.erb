@@ -30,8 +30,14 @@
   </a>
 </div>
 
+<div class="digg_pagination">
+    <div class="page_info">
+      <%= page_entries_info @places %>
+    </div>
+    <%= will_paginate @places, :container => false %>
+  </div>
 <% @places.each do |place| %>
-<%= will_paginate @places %>
+
 <div class="booyah-box col-xs-10 col-xs-offset-1">
 	<h1><%= link_to place.name, place_path(place) %></h1><br />
 	<i><%= link_to place.address, place_path(place) %></i><br /><br />

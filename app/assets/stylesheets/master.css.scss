@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster);
-@import url(https://fonts.googleapis.com/css?family=Bangers);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css);
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     height: 550px;
@@ -37,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
 	background: url('/assets/textured_paper.png');
-	font-family:Bangers
+	font-family:Oswald
 ;
 }
 
