@@ -1,4 +1,3 @@
 == Nomster
 
 This is a yelp clone app that I built while in The Firehose Project, it was the second app that I built.
-<tt>rake doc:app</tt>.
